@@ -2,3 +2,27 @@ img {
     width: 20%;
     height: 20%;
 }
+
+/* Portrait */
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 480px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: portrait) {
+    img {
+        width: 80%;
+        height: 80%;
+    }
+
+    h3 {
+        font-size: 6em;
+    }
+
+    h5 {
+        font-size: 4em;
+    }
+
+    button {
+        font-size: 5em;
+    }
+}

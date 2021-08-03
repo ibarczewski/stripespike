@@ -10,9 +10,18 @@ const domain = "http://localhost:3000";
 app.post("/create-checkout-session", async (req, res) => {
   const session = await stripe.checkout.sessions.create({
     payment_method_types: ["card"],
+    shipping_rates: ["shr_1JKURVIBX7TlKpWBmP91oRyp"],
+    shipping_address_collection: {
+      allowed_countries: ['US', 'CA'],
+    },
     line_items: [
       {
-        price: "price_1JKU4sIBX7TlKpWBpCoFf9uP",
+        price: "price_1JKUOIIBX7TlKpWBQbvXRfRM",
+        adjustable_quantity: {
+          enabled: true,
+          minimum: 1,
+          maximum: 10,
+        },
         quantity: 1,
       },
     ],
