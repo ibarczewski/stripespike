@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Buy cool split keyboards</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://polyfill.io/v3/polyfill.min.js?version=3.52.1&features=fetch"></script>
+    <script src="https://js.stripe.com/v3/"></script>
+  </head>
+  <body>
+    <section>
+      <div class="product">
+        <img
+          src="./assets/zodiark.jpg"
+          alt="Zodiark"
+        />
+        <div class="description">
+          <h3>Zodiark</h3>
+          <h5>$999.99</h5>
+        </div>
+      </div>
+      <form action="/create-checkout-session" method="POST">
+        <button type="submit">Checkout</button>
+      </form>
+    </section>
+  </body>
+</html>
